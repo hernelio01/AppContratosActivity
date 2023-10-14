@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellidos</string>
+    <string name="guardar">Guardar</string>
+    <string name="actualiza">Actualizar</string>
+    <string name="listar">Listar</string>
+    <string name="borro">Codigo Borrar/actualizar</string>
+    <string name="codigo">Codigo</string>
+    <string name="celular">Celular</string>
+    <string name="correo">correo</string>
+</resources>
