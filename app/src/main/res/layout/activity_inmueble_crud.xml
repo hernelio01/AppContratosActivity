@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2pt">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"
+            />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"
+            />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"/>
+    </TableLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/NombreInmueble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/nombreInmueble" />
+    <EditText
+        android:id="@+id/TipoInmueble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/tipoInmueble" />
+    <EditText
+        android:id="@+id/DireccionInmueble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/direccionInmueble" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="163dp">
+
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </ScrollView>
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="crearDatosInmueble"
+        android:text="@string/guardar" />
+    <Button
+        android:id="@+id/leer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="leerDatosInmueble"
+        android:text="@string/listar" />
+    <EditText
+        android:id="@+id/Codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/borro" />
+    <Button
+        android:id="@+id/Borrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrarDatosInmueble"
+        android:text="Borrar" />
+    <Button
+        android:id="@+id/ActualizaInmueble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="actualizarInmueble"
+        android:text="@string/actualiza" />
+</LinearLayout>

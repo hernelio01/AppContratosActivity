@@ -9,4 +9,7 @@
     <string name="codigo">Codigo</string>
     <string name="celular">Celular</string>
     <string name="correo">correo</string>
+    <string name="nombreInmueble">Nombre Inmueble</string>
+    <string name="tipoInmueble">Tipo Inmueble</string>
+    <string name="direccionInmueble">direccion Inmueble</string>
 </resources>

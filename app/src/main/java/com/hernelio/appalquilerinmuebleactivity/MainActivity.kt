@@ -27,5 +27,17 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        binding.btnPerro.setOnClickListener {
+
+            val name =  "Perro" //etName.text.toString()
+            // if (name.isNotEmpty()){
+            val intent = Intent(this, InmuebleCrudActivity::class.java)
+            // intent.putExtra("EXTRA_NAME", name)
+            startActivity(intent)
+            // }
+
+
+
+        }
     }
 }
