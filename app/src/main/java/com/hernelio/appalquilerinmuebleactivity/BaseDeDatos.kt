@@ -70,10 +70,10 @@ class BaseDeDatos (context: Context) : SQLiteOpenHelper(context, Db, null,1) {
         }
 
     }
-    fun actualizar(id:String,codigo:String,nombre:String,apellido:String,celular:String,correo:String){
+    fun actualizar(id:String,cod:String,nombre:String,apellido:String,celular:String,correo:String){
         val db=this.writableDatabase
         val contenedor= ContentValues()
-        contenedor.put("codigo",codigo)
+        contenedor.put("codigo",cod)
         contenedor.put("nombre",nombre)
         contenedor.put("apellido",apellido)
         contenedor.put("celular",celular)
