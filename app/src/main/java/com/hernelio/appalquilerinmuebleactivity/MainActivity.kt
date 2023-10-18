@@ -39,5 +39,17 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        binding.btnFlor.setOnClickListener {
+
+            val name =  "Flor" //etName.text.toString()
+            // if (name.isNotEmpty()){
+            val intent = Intent(this, ContratoCrudActivity::class.java)
+            // intent.putExtra("EXTRA_NAME", name)
+            startActivity(intent)
+            // }
+
+
+
+        }
     }
 }

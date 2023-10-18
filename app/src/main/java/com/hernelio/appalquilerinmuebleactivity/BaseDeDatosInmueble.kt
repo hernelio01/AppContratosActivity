@@ -1,5 +1,6 @@
 package com.hernelio.appalquilerinmuebleactivity
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -20,7 +21,6 @@ class BaseDeDatosInmueble (context: Context) : SQLiteOpenHelper(context, DbI, nu
         val crearTabla="CREATE TABLE inmueble(id INTEGER PRIMARY KEY AUTOINCREMENT,"+ "nombre VARCHAR(300), tipo VARCHAR(300), direccion VARCHAR(300))"
         p0?.execSQL(crearTabla)
     }
-
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         //TODO("Not yet implemented")
     }
@@ -57,6 +57,22 @@ class BaseDeDatosInmueble (context: Context) : SQLiteOpenHelper(context, DbI, nu
         db.close()
         return lista
     }
+
+    @SuppressLint("Range")
+    fun validarContrato(): List<Int> {
+        val contratosIds = mutableListOf<Int>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT id FROM contrato", null)
+
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndex(idC))
+            contratosIds.add(id)
+        }
+
+        cursor.close()
+        db.close()
+        return contratosIds
+    }
     fun borrar(codigo:String){
         if(codigo.length>0){
             val db=writableDatabase
@@ -72,5 +88,20 @@ class BaseDeDatosInmueble (context: Context) : SQLiteOpenHelper(context, DbI, nu
         contenedor.put("tipo",tipo)
         contenedor.put("direccion",direccion)
         db.update("inmueble",contenedor,"id=?", arrayOf(id))
+    }
+    @SuppressLint("Range")
+    fun getAllInmuebles(): List<Int> {
+        val inmuebleIds = mutableListOf<Int>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT id FROM inmueble", null)
+
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndex(idI))
+            inmuebleIds.add(id)
+        }
+
+        cursor.close()
+        db.close()
+        return inmuebleIds
     }
 }

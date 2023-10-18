@@ -1,5 +1,6 @@
 package com.hernelio.appalquilerinmuebleactivity
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -80,6 +81,20 @@ class BaseDeDatos (context: Context) : SQLiteOpenHelper(context, Db, null,1) {
         contenedor.put("correo",correo)
         db.update("inquilino",contenedor,"id=?", arrayOf(id))
     }
+    @SuppressLint("Range")
+    fun getAllInquilinos(): List<Int> {
+        val inquilinoIds = mutableListOf<Int>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT id FROM inquilino", null)
 
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndex(id))
+            inquilinoIds.add(id)
+        }
+
+        cursor.close()
+        db.close()
+        return inquilinoIds
+    }
 
 }

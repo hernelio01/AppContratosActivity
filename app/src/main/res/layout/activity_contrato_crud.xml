@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2pt">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"
+            />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"
+            />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt"/>
+    </TableLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinnerInquilino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/inquilino"/>
+
+    <Spinner
+        android:id="@+id/spinnerInmueble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/inmueble"/>
+
+
+    <EditText
+        android:id="@+id/FechaInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/fechaInicial" />
+    <EditText
+        android:id="@+id/FechaFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/fechaFinal" />
+    <EditText
+        android:id="@+id/Observacioens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/observaciones" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="163dp">
+
+        <TextView
+            android:id="@+id/mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="crearDatosContrato"
+        android:text="@string/guardar" />
+
+    <Button
+        android:id="@+id/leer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="leerDatosContrato"
+        android:text="@string/listar" />
+    <EditText
+        android:id="@+id/Codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/borro" />
+
+    <Button
+        android:id="@+id/Borrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrarDatosContrato"
+        android:text="Borrar" />
+
+    <Button
+        android:id="@+id/ActualizaInmueble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="actualizarContrato"
+        android:text="@string/actualiza" />
+</LinearLayout>

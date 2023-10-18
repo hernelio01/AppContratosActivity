@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 import com.hernelio.appalquilerinmuebleactivity.databinding.ActivityInmuebleCrudBinding
 
@@ -48,6 +49,8 @@ class InmuebleCrudActivity : AppCompatActivity() {
             leerDatosInmueble(view)
         }else{
             mensaje.setText("¡¡¡¡¡INGRESAR DATOS DEL INMUEBLE¡")
+            Toast.makeText(this, "¡Por favor, ingrese dastos del inmueble!", Toast.LENGTH_SHORT).show()
+
             nombreI.requestFocus()
         }
     }
@@ -72,12 +75,13 @@ class InmuebleCrudActivity : AppCompatActivity() {
 
         var db=BaseDeDatosInmueble(this)
 
-        db.borrar(codigo.text.toString())
-        codigo.setText("")
-        codigo.requestFocus()
-        mensaje.setText("Datos borrados exitosamente")
-        leerDatosInmueble(view)
+         db.borrar(codigo.text.toString())
+         codigo.setText("")
+         codigo.requestFocus()
+         mensaje.setText("Datos borrados exitosamente")
+         leerDatosInmueble(view)
     }
+
     fun actualizarInmueble(view: View){
         var db=BaseDeDatosInmueble(this)
         db.actualizar(codigo.text.toString(),nombreI.text.toString(),tipo.text.toString(),direccion.text.toString())

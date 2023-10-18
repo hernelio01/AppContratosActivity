@@ -12,4 +12,9 @@
     <string name="nombreInmueble">Nombre Inmueble</string>
     <string name="tipoInmueble">Tipo Inmueble</string>
     <string name="direccionInmueble">direccion Inmueble</string>
+    <string name="fechaInicial">Fecha Inicial</string>
+    <string name="fechaFinal">Fecha Final</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="inquilino">selección Inquilino</string>
+    <string name="inmueble">selección Inmueble</string>
 </resources>
